@@ -10,6 +10,11 @@ Process has three basic components
 - The associated data needed by the program (variables, workspace, buffers, etc.)
 - The execution context of the program (State of the process)
 
+- Multiple threads can exist within one process where:
+  - Each thread contains its own register set and local variables (stored in the stack).
+  - All threads of a process share global variables (stored in heap) and the program code.
+
+
 ## Multi Threading
 - Multithreading is a way of achieving multitasking.
 - A **thread** is an entity within a process that can be scheduled for execution.
