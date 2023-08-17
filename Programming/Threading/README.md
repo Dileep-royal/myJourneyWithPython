@@ -11,13 +11,20 @@ Process has three basic components
 - The execution context of the program (State of the process)
 
 ## Multi Threading
-
 - Multithreading is a way of achieving multitasking.
 - A **thread** is an entity within a process that can be scheduled for execution.
 - Simply, a thread is a subset of a process.
 - It is the smallest unit of processing that can be performed in an OS (Operating System).
+### Why we need threading and when to use
+- To speed up the program significantly.
+- This speeding up is done by concurrently running multiple threads.
+- Tasks are of two types IO Bound and CPU Bound.
+- Threading is used only in case of IO Bound.
+- IO Bound examples are reading/writing from files, Network operations and downloading things from Internet.
+- CPU Bound examples are the tasks that actually using CPU like doing computations.
+- While one thread waiting for IO Bound opearation to complete,concurrently starts the other threads instead of waiting.
 
-### To main local data
+### To maintain local data
 
 create an object of local() method  then assign values to variables of that object.
 
