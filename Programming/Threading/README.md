@@ -1,7 +1,7 @@
 # Threading
 
 ## Process
-
+<pre>
 A process is an instance of a computer program that is being executed.
 
 Process has three basic components
@@ -13,8 +13,7 @@ Process has three basic components
 Multiple threads can exist within one process where:
 - Each thread contains its own register set and local variables (stored in the stack).
 - All threads of a process share global variables (stored in heap) and the program code.
-
-
+</pre>
 ## Multi Threading
 - Multithreading is a way of achieving multitasking.
 - A **thread** is an entity within a process that can be scheduled for execution.
