@@ -77,6 +77,68 @@ thread1.start()
 ```python
 thread1.join()
 ```
+### current_thread() and main_thread()
+- This functions **current_thread()** and **main_thread()** are used to get the names of current and main thread respectively.
+- Thread object have **name** attribute which contains the name of the thread.
+- **os.getpid()** function to get **Process ID**.
+  ```python
+  import threading
+  import os
+  print(f"Name of thread:{threading.current_thread().name}")
+  print(f"Process ID:{os.getpid()}")
+  ```
+### Example of Threading
+- Below we created a 10 threads, where each thread took 10 seconds to execute.
+- Here, We make use of threading to speed ups the program and executed only in 1 second.
+
+  ```python
+import threading
+import time
+
+start=time.perf_counter()
+
+def do_something(seconds):
+    print(f'Sleeping {seconds} second(s)...')
+    time.sleep(seconds)
+    print(f'Done Sleeping...')
+threads = []
+
+for _ in range(10):
+    t = threading.Thread(target=do_something, args=[1])
+    t.start()
+    threads.append(t)
+
+for thread in threads:
+    thread.join()
+    
+end=time.perf_counter()
+
+print(f"Successfully Executed in {round(end-start,2)} Second(s)")
+  ```
+### Output:
+```Text
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Sleeping 1 second(s)...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Done Sleeping...
+Successfully Executed in 1.02 Second(s)
+```
 
 # ThreadPool
 
