@@ -88,7 +88,7 @@ thread1.join()
   print(f"Process ID:{os.getpid()}")
   ```
 ### Example of Threading
-- Below we created a 10 threads, where each thread took 10 seconds to execute.
+- In below code, we created a 10 threads, where each thread took 10 seconds to execute.
 - Here, We make use of threading to speed ups the program and executed only in 1 second.
 
 ```Python
