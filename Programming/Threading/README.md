@@ -91,7 +91,7 @@ thread1.join()
 - Below we created a 10 threads, where each thread took 10 seconds to execute.
 - Here, We make use of threading to speed ups the program and executed only in 1 second.
 
-  ```python
+```Python
 import threading
 import time
 
@@ -114,9 +114,10 @@ for thread in threads:
 end=time.perf_counter()
 
 print(f"Successfully Executed in {round(end-start,2)} Second(s)")
-  ```
+```
 ### Output:
-```Text
+
+```
 Sleeping 1 second(s)...
 Sleeping 1 second(s)...
 Sleeping 1 second(s)...
