@@ -72,7 +72,7 @@ thread1.start()
 ### join()
 
 - This blocks the calling current program until the thread whose join() method is called terminates.
-- In simple, this allows us to execute the threads first before executing current program but after the thread execution completed.
+- In simple, this allows us to execute the threads first before executing main thread but after the thread execution completed.
 
 ```python
 thread1.join()
@@ -98,7 +98,7 @@ import time
 start=time.perf_counter()
 
 def do_something(seconds):
-    print(f'Sleeping {seconds} second(s)...')
+    print(f'Sleeping {seconds} Second(s)...')
     time.sleep(seconds)
     print(f'Done Sleeping...')
 threads = []
@@ -141,7 +141,97 @@ Done Sleeping...
 Successfully Executed in 1.02 Second(s)
 ```
 
-# ThreadPool
+# Python ThreadPool
+**Available from Python 3.2**
+
+- A thread pool is a collection of threads that are created in advance and can be reused to execute multiple tasks. 
+- The **concurrent.futures** module in Python provides a **ThreadPoolExecutor** class that makes it easy to create and manage a thread pool.
+
+### submit() 
+- **submit()** allows you to create thread and assigns a task by passing arguments for a task
+- Then, expects a return value from targeted task.
+- By using **result()** method we can print the return value.
+```python
+import concurrent.features
+def do_something(seconds):
+    print(f"Sleeping {seconds} Second(s)")
+    time.sleep(seconds)
+    return f"Done Sleeping..."
+
+with concurrent.features.ThreadPoolExecutor() as executor:
+    f1=executor.submit(do_something,1)
+    print(f1.result())
+```
+
+### concurrent.features.as_completed()
+- **as_completed()** method of **concurrent.features** module allows us to loop over results of threads as they completed executing.
+- This is a very helpful method as it prints the thread result immediately upon on complection of execution.
+
+### concurrent.features.map()
+- **map()** method of **concurrent.features** module allows us to map target method with iteratable sequence of arguments to each thread and gives us the return value from target nethod.
+- Syntax of map() method is:
+```python
+    concurrent.features.map(name_of_method,iterable_sequence)
+```
+
+## Real life Example of Threading
+- Below code is to download images from Internet. It took a lot of time to download images one by one.
+- This Downloading of images from Internet is a IO Bound task.
+- This involves making a request to server to download images and it will wait to get response from server and downloads image completely.
+- Instead of waiting, by using threading we can concurrently makes request to server to download other images.
+- This provide us a significant speed to execute programs quickly.
+  
+### Code
+```python
+import requests
+import time
+import concurrent.futures
+
+img_urls = [
+    'https://images.unsplash.com/photo-1516117172878-fd2c41f4a759',
+    'https://images.unsplash.com/photo-1532009324734-20a7a5813719',
+    'https://images.unsplash.com/photo-1524429656589-6633a470097c',
+    'https://images.unsplash.com/photo-1530224264768-7ff8c1789d79',
+    'https://images.unsplash.com/photo-1564135624576-c5c88640f235',
+    'https://images.unsplash.com/photo-1541698444083-023c97d3f4b6',
+    'https://images.unsplash.com/photo-1522364723953-452d3431c267',
+    'https://images.unsplash.com/photo-1513938709626-033611b8cc03',
+    'https://images.unsplash.com/photo-1507143550189-fed454f93097',
+    'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e',
+    'https://images.unsplash.com/photo-1504198453319-5ce911bafcde',
+    'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99',
+    'https://images.unsplash.com/photo-1516972810927-80185027ca84',
+    'https://images.unsplash.com/photo-1550439062-609e1531270e',
+    'https://images.unsplash.com/photo-1549692520-acc6669e2f0c'
+]
+
+t1 = time.perf_counter()
+
+
+def download_image(img_url):
+    img_bytes = requests.get(img_url).content
+    img_name = img_url.split('/')[3]
+    img_name = f'{img_name}.jpg'
+    with open(img_name, 'wb') as img_file:
+        img_file.write(img_bytes)
+        print(f'{img_name} was downloaded...')
+
+
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    executor.map(download_image, img_urls)
+
+
+t2 = time.perf_counter()
+
+print(f'Finished in {t2-t1} seconds')
+```
+### Output
+```
+
+```
+## Note
+- Multithreading can help you make your programs more efficient and responsive. 
+- However, it’s important to be careful when working with threads to avoid issues such as race conditions and deadlocks.
 
 ## Resources
 
