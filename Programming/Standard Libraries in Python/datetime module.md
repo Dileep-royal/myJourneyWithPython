@@ -1,6 +1,6 @@
 # datetime module
 
-datetime module allows to work with Date, Time and Timedelta Time zones.
+datetime module allow us to work with Date, Time, Timedelta and Time zones.
 
 ### date()
 
