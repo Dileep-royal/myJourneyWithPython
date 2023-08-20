@@ -52,7 +52,7 @@ os.makedirs(”directory_name/sub_directory_name/…”)
 **Using rmdir**
 
 ```python
-os.mkdir(”directory_name”)
+os.rmdir(”directory_name”)
 ```
 
 **Using removedirs**  
@@ -60,7 +60,7 @@ os.mkdir(”directory_name”)
 This allows us to remove directory recursively. Here, we have to specify entire tree structure path to delete recursively.
 
 ```python
-os.makedirs(”directory_name/sub_directory_name/…”)
+os.removedirs(”directory_name/sub_directory_name/…”)
 ```
 
 ### Rename the file/Directory
