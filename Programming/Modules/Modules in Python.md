@@ -67,7 +67,7 @@ import sys
 sys.path.append("C:/Users/MSI/Desktop/Python/folder2")
 ```
 
-1. **Set a module path to Python Environment variable “PYTHONPATH”**
+2. **Set a module path to Python Environment variable “PYTHONPATH”**
 - Add a path of python source module to PYTHONPATH environment variable.
 - Steps to add new environment variable.
     1. In window search bar, search for Advanced System Settings.
@@ -75,6 +75,6 @@ sys.path.append("C:/Users/MSI/Desktop/Python/folder2")
     3. In Environment Variables tab, Click on new user variable button.
     4. In new user Variable tab, Enter Variable Name as “**PYTHONPATH**” and set Variable Value to path of source module i.e.; **folder2**.
 
-** Snapshot "PYTHONPATH" Environment Variable:**
+**Snapshot "PYTHONPATH" Environment Variable:**
 
 ![Screenshot 2023-08-15 103106.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_103106.png)
