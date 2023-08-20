@@ -74,6 +74,7 @@ sys.path.append("C:/Users/MSI/Desktop/Python/folder2")
     2. Upon Opening Advanced System Settings tab, then click on Environment Variables button.
     3. In Environment Variables tab, Click on new user variable button.
     4. In new user Variable tab, Enter Variable Name as “**PYTHONPATH**” and set Variable Value to path of source module i.e.; **folder2**.
+
 ** Snapshot "PYTHONPATH" Environment Variable:**
 
 ![Screenshot 2023-08-15 103106.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_103106.png)
