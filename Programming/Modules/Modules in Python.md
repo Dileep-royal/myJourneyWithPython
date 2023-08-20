@@ -14,7 +14,7 @@ You have several modules in a project, Suppose we need to use a specific method 
 - Decrease in No. of lines of code
 
 <aside>
-💡 **Note:**                                                                                                                                          If we have any print statements in source module those are executed automatically. This is because it includes all the code in to destination module.
+💡 **Note:**                                                                                                                                        If we have any print statements in source module those are executed automatically. This is because it includes all the code in to destination module.
 
 </aside>
 
