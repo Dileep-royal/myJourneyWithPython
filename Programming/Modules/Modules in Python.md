@@ -25,7 +25,7 @@ File Structure example:
 ### From **Same Directory**
 
 - Accessing a modules from same directory is straightforward and simple to do.
-- Suppose, you have two modules named with **module1.py** and **module2.py** with in the folder named **folder1**.
+- Suppose, you have two modules named with **module1.py** and **module2.py** with in the same folder called hg **folder1**.
 - In **module1.py** contains a method **evenNumbersUptoN()** and Variable namely **sampleVariable** .
 - In **module2.py** you want to use methods and variables of **module1.py** then, you can simply import required things from **module1.py** using “import” keyword.
 
@@ -39,9 +39,9 @@ File Structure example:
 
 ### From Different Directory
 
-- For Example, you have two modules named with **module3.py** in the ****folder named **folder2** and **module2.py** with in the folder named **folder1**.
+- For Example, you have two modules named with **module3.py** in the folder called **folder2** and **module2.py** with in the folder called **folder1**.
 - In **module3.py** contains a method **oddNumbersUptoN()**.
-- In **module2.py* you want to use methods and variables of **module3.py** then, you can simply import required things from **[lmodule3.py** using “import” keyword.
+- In **module2.py* you want to use methods and variables of **module3.py** then, you can simply import required things from **lmodule3.py** using “import” keyword.
 
 **Snapshot of module2.py:**
 
@@ -74,6 +74,6 @@ sys.path.append("C:/Users/MSI/Desktop/Python/folder2")
     2. Upon Opening Advanced System Settings tab, then click on Environment Variables button.
     3. In Environment Variables tab, Click on new user variable button.
     4. In new user Variable tab, Enter Variable Name as “**PYTHONPATH**” and set Variable Value to path of source module i.e.; **folder2**.
-- Snapshot of **PYTHONPATH** Environment Variable**:**
+- *** of "PYTHONPATH" Environment Variable:
 
 ![Screenshot 2023-08-15 103106.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_103106.png)
