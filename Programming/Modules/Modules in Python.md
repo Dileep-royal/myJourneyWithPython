@@ -25,29 +25,29 @@ File Structure example:
 ### From **Same Directory**
 
 - Accessing a modules from same directory is straightforward and simple to do.
-- Suppose, you have two modules named with [**module1.py](http://module1.py)** and [**module2.py**](http://modul2.py) with in the folder named **folder1**.
-- In [**module1.py](http://module1.py)** contains a method **evenNumbersUptoN()** and Variable namely **sampleVariable** .
-- In [**module2.py](http://modul2.py)** you want to use methods and variables of **[module1.py](http://module1.py)** then, you can simply import required things from **[module1.py](http://module1.py)** using “import” keyword.
+- Suppose, you have two modules named with **module1.py** and **module2.py** with in the folder named **folder1**.
+- In **module1.py** contains a method **evenNumbersUptoN()** and Variable namely **sampleVariable** .
+- In **module2.py** you want to use methods and variables of **module1.py** then, you can simply import required things from **module1.py** using “import” keyword.
 
-**Snapshot of [module1.py](http://module1.py):**
+**Snapshot of module1.py:**
 
 ![Screenshot 2023-08-15 102222.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_102222.png)
 
-**Snapshot of [module2.py](http://modul2.py):**
+**Snapshot of module2.py:**
 
 ![Screenshot 2023-08-15 102707.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_102707.png)
 
 ### From Different Directory
 
-- For Example, you have two modules named with [**module3.py](http://module1.py)** in the ****folder named **folder2** and [**module2.py**](http://modul2.py) with in the folder named **folder1**.
-- In [**module3.py](http://module1.py)** contains a method **oddNumbersUptoN()**.
-- In [**module2.py](http://modul2.py)** you want to use methods and variables of **[module3.py](http://module1.py)** then, you can simply import required things from **[module3.py](http://module1.py)** using “import” keyword.
+- For Example, you have two modules named with **module3.py** in the ****folder named **folder2** and **module2.py** with in the folder named **folder1**.
+- In **module3.py** contains a method **oddNumbersUptoN()**.
+- In **module2.py* you want to use methods and variables of **module3.py** then, you can simply import required things from **[lmodule3.py** using “import” keyword.
 
-**Snapshot of [module2.py](http://module1.py):**
+**Snapshot of module2.py:**
 
 ![Screenshot 2023-08-15 102707.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_102707.png)
 
-**Snapshot of [module3.py](http://modul2.py):**
+**Snapshot of module3.py:**
 
 ![Screenshot 2023-08-15 102200.png](Modules%20in%20Python%206462a68011034d2fb9504aae183033ba/Screenshot_2023-08-15_102200.png)
 
