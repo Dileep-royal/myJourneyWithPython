@@ -1,4 +1,4 @@
-# Regular Expression
+# re module
 
 - re module is used to retrieve matches of a specific pattern in a file or string.
 - pattern is formed using ASCII letters, digits and Meta Characters.
