@@ -21,7 +21,7 @@
 |           [^] | Matches characters, which are NOT in a bracket |
 |      Groups |  |
 |            () | Creates a group of choices of a character(s) |
-|             | | Either or  ,this acts a separator in a group |
+|             \| | Either or  ,this acts a separator in a group |
 |  |  |
 |           /d | matches digit (0-9) |
 |           /D | matches everything except digits (0-9) |
