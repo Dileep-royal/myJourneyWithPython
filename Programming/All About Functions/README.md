@@ -362,6 +362,6 @@ print(my_set)
 - More time-efficient and space-efficient than loops.
 - Require fewer lines of code.
 
-### **Advantages of Comprehension**
+### **Disadvantages of Comprehension**
 
 - Reduces readability
