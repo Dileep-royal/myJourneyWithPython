@@ -1,4 +1,4 @@
-# Standard Libraries in Python
+# Standard Library of Python
 
 # Standard Library
 
