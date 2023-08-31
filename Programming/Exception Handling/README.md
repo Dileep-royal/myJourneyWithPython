@@ -83,11 +83,11 @@ It is used to raise an exception in case we got a empty list.
 
 ```python
 class EmptyListError(Exception):
-pass
+    pass
 
 def calculate_average(numbers):
-if len(numbers) == 0:
-    raise EmptyListError("Cannot calculate average of an empty list.")
+    if len(numbers) == 0:
+        raise EmptyListError("Cannot calculate average of an empty list.")
 # Rest of the code for calculating the average
 
 try:
