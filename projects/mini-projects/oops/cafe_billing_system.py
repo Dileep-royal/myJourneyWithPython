@@ -72,10 +72,3 @@ while(1):
     item_quantity = int(input("Enter the quantity: "))
 
     add_or_update_menu(item_name, item_quantity)
-
-    
-
-
-    
-
-
